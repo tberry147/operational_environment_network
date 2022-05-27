@@ -15,6 +15,8 @@ locals {
     component_name          = "kojitechs"
   }
   vpc_id = aws_vpc.kojitechs_vpc.id
+
+  gateway_id = aws_internet_gateway.igw.id
 }
 
 

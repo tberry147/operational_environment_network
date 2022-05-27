@@ -28,3 +28,9 @@ variable "db_subnet" {
   type        = list(any)
   default     = ["10.0.51.0/24", "10.0.53.0/24"]
 }
+
+variable "instance_type" {
+  description = "Type of the instance"
+  type = string
+  default = "t2.micro"
+}
