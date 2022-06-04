@@ -1,6 +1,7 @@
 
 data "aws_availability_zones" "az" {
   state = "available"
+
 }
 
 data "aws_ami" "ami" {
@@ -15,4 +16,4 @@ data "aws_ami" "ami" {
 
 data "aws_key_pair" "mykey" {
   key_name = "Key"
- }
+}

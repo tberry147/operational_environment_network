@@ -14,10 +14,39 @@ locals {
     cell_name               = "WEB"
     component_name          = "kojitechs"
   }
-  vpc_id = aws_vpc.kojitechs_vpc.id
+  vpc_id            = try(aws_vpc.kojitechs_vpc[0].id, "")
+  create_vpc        = var.create_vpc
+  availability_zone = data.aws_availability_zones.az.names
 
-  gateway_id = aws_internet_gateway.igw.id
+  public_subnet = {
+    subnet_1 = {
+      cidr_block        = var.pub_subs[0]
+      availability_zone = local.availability_zone[0]
+      subnet_2 = {
+        cidr_block        = var.pub_subs[1]
+        availability_zone = local.availability_zone[1]
+      }
+    }
+
+  }
+  private_subnet = {
+    subnet_1 = {
+      cidr_block        = var.prv_subs[0]
+      availability_zone = local.availability_zone[0]
+    }
+    subnet_2 = {
+      cidr_block        = var.prv_subs[1]
+      availability_zone = local.availability_zone[1]
+    }
+  }
+  db_subnet = {
+    subnet_1 = {
+      cidr_block        = var.db_subs[0]
+      availability_zone = local.availability_zone[0]
+    }
+    subnet_2 = {
+      cidr_block        = var.db_subs[1]
+      availability_zone = local.availability_zone[1]
+    }
+  }
 }
-
-
-
