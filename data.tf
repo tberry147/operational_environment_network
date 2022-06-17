@@ -14,6 +14,6 @@ data "aws_ami" "ami" {
   }
 }
 
-data "aws_key_pair" "mykey" {
-  key_name = "Key"
-}
+# data "aws_key_pair" "mykey" {
+#   key_name = "Key"
+# }

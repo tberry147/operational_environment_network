@@ -55,9 +55,10 @@ resource "aws_subnet" "db_subnet" {
   vpc_id                  = local.vpc_id
   cidr_block              = var.db_subs[count.index]
   availability_zone       = element(var.db_sub_az, count.index)
-  tags = {
-    Name = "database_subnet_${count.index + 1}" #appending AZ to the name of subnet.
-  }
+
+  # tags = {
+  #   Name = "database_subnet_${count.index + 1}" #appending AZ to the name of subnet.
+  # }
 }
 
 # # Create Public Route Table

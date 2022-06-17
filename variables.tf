@@ -69,3 +69,4 @@ variable "db_sub_az" {
   description = "DB subnet AZ"
   type = list(any)
 }
+
