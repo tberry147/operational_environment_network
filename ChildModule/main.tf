@@ -7,8 +7,8 @@ module "networking" {
   pub_subs   = var.public_sub
   prv_subs   = var.private_sub
   db_subs    = var.database_sub
-  pub_sub_az = ["us-east-1a", "us-east-1b"]
-  prv_sub_az = ["us-east-1a", "us-east-1b"]
-  db_sub_az  = ["us-east-1a", "us-east-1b"]
+  pub_sub_az = var.pub_sub_az
+  prv_sub_az = var.prv_sub_az
+  db_sub_az  = var.db_sub_az
 
 }

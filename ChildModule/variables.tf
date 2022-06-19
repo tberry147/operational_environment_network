@@ -28,3 +28,21 @@ variable "database_sub" {
   type = list
   default = []
 }
+
+variable "pub_sub_az" {
+  description = "Public Subnet AZ"
+  type = list
+  default = []
+}
+
+variable "prv_sub_az" {
+  description = "Private Subnet AZ"
+  type = list
+  default = []
+}
+
+variable "db_sub_az" {
+  description = "Database Subnet AZ"
+  type = list
+  default = []
+}
