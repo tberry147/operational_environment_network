@@ -70,3 +70,7 @@ variable "db_sub_az" {
   type = list(any)
 }
 
+variable "tag-name" {
+  type = string
+  default = null
+}

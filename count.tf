@@ -6,9 +6,9 @@ resource "aws_vpc" "kojitechs_vpc" {
   enable_dns_hostnames = var.enable_dns_hostnames
   enable_dns_support   = var.enable_dns_support
 
-  # tags = {
-  #   Name = "kojitechs_vpc"
-  # }
+  tags = {
+    Name = var.tag-name
+  }
 }
 
 # Create Internet IGW
@@ -30,9 +30,9 @@ resource "aws_subnet" "public_subnet" {
   map_public_ip_on_launch = true
   availability_zone       = element(var.pub_sub_az, count.index)
  
-  # tags = {
-  #   Name = "public_subnet_${count.index + 1}"
-  # }
+   tags = {
+     Name = "public_subnet_${count.index + 1}"
+   }
 }
 
 # Create Private Subnet
@@ -43,9 +43,9 @@ resource "aws_subnet" "private_subnet" {
   cidr_block              = var.prv_subs[count.index]
   availability_zone       = element(var.prv_sub_az, count.index)
   
-  # tags = {
-  #   Name = "private_subnet_${count.index + 1}"
-  # }
+   tags = {
+     Name = "private_subnet_${count.index + 1}"
+   }
 }
 
 # Create Database Subnet
@@ -56,9 +56,9 @@ resource "aws_subnet" "db_subnet" {
   cidr_block              = var.db_subs[count.index]
   availability_zone       = element(var.db_sub_az, count.index)
 
-  # tags = {
-  #   Name = "database_subnet_${count.index + 1}" #appending AZ to the name of subnet.
-  # }
+   tags = {
+     Name = "database_subnet_${count.index + 1}" #appending AZ to the name of subnet.
+   }
 }
 
 # # Create Public Route Table

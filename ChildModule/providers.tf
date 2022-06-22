@@ -37,7 +37,7 @@ variable "env" {
   type        = map(string)
   # default = {
   #   "prod"  = "056433689356"
-  #   dev     = "748843660694"
+  #   dev     = "260899467279"
   #   sandbox = "818272138189"
 
   # }

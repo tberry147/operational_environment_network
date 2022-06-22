@@ -10,5 +10,5 @@ module "networking" {
   pub_sub_az = var.pub_sub_az
   prv_sub_az = var.prv_sub_az
   db_sub_az  = var.db_sub_az
-
+  tag-name = "kojitechs_vpc"
 }
