@@ -788,6 +788,3 @@ https://iandi.awsapps.com/start
 cd .aws
 cd cred
 cat ~/.aws/credentials
-
-AKIAQ2I5VYMGNSULHIVE
-WiWdQ8MvXedDAkL9DKtSVE86m16sY/vVqp8debW1
