@@ -1,0 +1,793 @@
+
+yum -y update
+yum install httpd
+systemctl start httpd
+systemctl enable httpd
+
+systemctl status httpd
+
+cd /var/www/html/
+
+nano test.html
+
+Hi Whizlabs, I am a public page 
+
+systemctl start httpd
+
+http://107.21.198.65/test.html
+
+
+AKIAQ2I5VYMGNSULHIVE
+WiWdQ8MvXedDAkL9DKtSVE86m16sY/vVqp8debW1
+
+
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+
+#!/bin/bash/
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+systemctl status httpd
+cd /var/www/html/
+nano test.html
+hello from FIDT
+systemctl start httpd
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::imransucess/*"
+        }
+    ]
+}
+
+
+
+chmod 0400 EC2 pem
+
+ssh -i location of key\ec2.pem ec2-user@ip4
+
+aws --version
+
+aws iam list users
+
+
+http://3.94.54.13:8000//en-US/account/login?return_to=%2Fen-US%2F
+
+SPLUNK-i-013489ea269f4ac80
+
+
+ls -ltr
+
+tar -xvzf
+
+cd splunk
+
+cd bin
+
+./splunk start
+
+uptime for Hibernating
+
+ssh -i C:\Users\totim\Downloads\key.pem ec2-user@ip
+
+
+admin
+SPLUNK-i-029904cb747ace1e3
+
+
+
+EnV
+
+system V
+
+Path
+
+cmd
+
+terraform -v
+
+
+
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.tade.id
+  instance_id = aws_instance.tade.id
+   }
+resource "aws_ebs_volume" "tade" {
+  availability_zone = "us-east-1b"
+  size              = 1
+}
+
+
+cat >>
+
+go out cd ..
+
+touch kay.txt  ..new file
+
+vi kay.txt
+
+cat kay.txt ......display
+
+esc :wq
+esc q!
+
+
+rm -rf
+
+mv -v DIR/ ..
+
+
+
+
+
+
+aws eks update-kubeconfig --name clustername
+
+Kubectl config get-contexts
+(All Cluster)
+
+Kubectl config use-contexts arn
+
+
+
+C:\Program Files\Git\usr\bin\git.exe
+
+
+Jenkins Install
+
+port 8080
+
+https://pkg.jenkins.io/redhat/
+
+amazon-linux-extras install epel
+
+amazon-linux-extras install java-openjdk11
+
+yum install jenkins
+
+service jenkins start
+service jenkins status
+chkconfig jenkins on
+
+cat
+
+
+
+Console Output
+to check reason for build failure.
+
+SonarQube is an open-source platform developed by SonarSource for continuous inspection of code quality.
+port 9000
+
+Maven is to build your code
+
+build trigger setting up a trigger for build
+
+nexus server to store your artifact (info about your artifact)
+
+Post build
+Tomcat 
+
+https://drive.google.com/drive/folders/1Kv2tRD-IDIp7nCXpZD_gUrRXs52JWrPR
+
+
+
+Docker ECR..... sudo chmod 666 /var/run/docker.sock
+
+
+
+AWS CLI
+
+s3 cli
+
+aws s3 ls s3    
+
+aws s3 mb s3
+
+aws s3 cp s3 file
+
+aws s3 cp s3 file    / --storage--class REDUCED REDUNDANCY
+
+aws s3 sync . s3 
+aws s3 sync . s3: --delete
+aws s3 sync s3:    / .
+aws s3 sync s3:     . --delete
+aws s3 sync . s3://      --exclude, include *.css
+
+aws s3 mv path s3:   --recursive
+aws s3 mv s3:     /dr path --recursive
+
+aws s3 rb s3:   --force
+
+ec2 cli
+
+echo apache.txt
+vim apache.txt
+
+#!/bin/bash
+sudo yum update -y
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+
+aws ec2 create-key-pair --key-name <enter key pair name>
+
+aws ec2 create-security-group --group-name <enter name> --description "<enter name>"
+
+aws ec2 authorize-security-group-ingress --group name <enter security group name> --protocol tcp --port 80 --group-owner <AWS account id> --cidr 0.0.0.0/0 --source-group <enter group id>
+
+aws ec2 run-instances --image-id <ami-number> --count 1 --instance-type t2.micro --key-name <enter key pair name> --security-group-ids <sg-enter security group id> --user-data file://apache.txt
+
+
+Installing Mysql
+mysql -u name -p -h endpoints name
+
+
+Patching Command
+#!/bin/bash
+yum updateinfo list --seurity
+
+#!/bin/bash
+yum -y update --security
+
+#!/bin/bash
+yum updateinfo list --seurity
+
+#!/bin/bash
+reboot
+
+#!/bin/bash
+uptime
+
+
+data.aws_availability_zones.az.names
+
+slice (data.aws_availability_zones.az.names, 0, 3)
+
+toset for output 2 subnets
+1349445663
+
+terraform plan -no-color > plan.out
+
+..........................................................................................................................
+
+K8s on UBUNTU-server:
+First we install the prerequisites for k8s env.
+1- install docker,
+     >apt-get update
+     >apt-get install docker.io -y
+ 2- Enable docker;
+     >systemctl enable docker.service
+     >systemctl start docker.service
+ 3-Check to be sure docker is running;
+      >systemctl status docker
+
+#Kubernetes prerequisites:
+>apt-get update
+>apt-get update && apt-get install -y apt-transport-https
+>curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - 
+>cat <<EOF >/etc/apt/sources.list.d/kubernetes.list 
+>deb http://apt.kubernetes.io/ kubernetes-xenial main 
+>EOF
+>apt-get update
+Now we can install kubeadm kubectl kubelet
+>apt-get install kubeadm kubectl kubelet
+
+#Next we make the master master:
+>kubeadm init
+>sudo kubeadm init --pod-network-cidr=10.244.10.0/16
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+#Now lets see if our master node is ready;
+> kubectl get nodes
+If master is NOT READY, run :
+ >kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+Then…
+ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/k8s-manifests/kube-flannel-rbac.yml
+OR… 
+>kubectl apply -f \https://docs.projectcalico.org/v3.6/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+OR…
+>apt-get install https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+>kubectl apply -f kube-flannel.yml
+> kubectl get pods
+
+> kubectl get pods —all-namespaces
+
+coreDNS are not available which is the pod network policy provider for the pods
+
+ERRORS:
+Master not ready— Quickstart for calico
+>kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+
+Worker NotReady after join;
+    >run the weave command as above
+OR 
+run the reset command:
+
+>sudo kubeadm reset
+
+sudo swapoff -a 
+
+sudo kubeadm init --pod-network-cidr=10.244.10.0/16
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+>kubectl get nodes
+
+...............................
+kubernetes objects-YML files
+
+1- PODS:
+#Create a yml file;
+>sudo nano pod1.yml
+apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx-pod5
+    labels:
+        type: nginx
+        version: v1
+spec:
+    containers:
+    - name: my-nginx
+      image: nginx:latest
+      ports:
+      - containerPort: 80
+ 
+>kubectl create -f pod1.yml
+
+#created…
+#Next we we check to see what is going on inside the pod;
+>kubectl describe pods
+We should see the NODEip in which the pod is seated and all other good stuff,
+Check also pod status it should say RUNNING.
+Next, we create a label for one of our pods e.g:
+
+>kubectl label pods -o=wide —show-labels
+>kubectl label node “node ip” “label”
+
+To see it run;
+>kubectl get nodes —all-labels
+
+#next we add the Node selector on the config yml file:
+
+>>sudo nano pod1.yml
+apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx-pod3
+    labels:
+        type: nginx
+        version: v1
+spec:
+    containers:
+    - name: my-nginx
+      image: nginx:latest
+      ports:
+      - containerPort: 80
+    #nodeSelector: 
+         #az: b
+
+#To see all events we run 
+>kubectl get events
+
+#Now lets see where the pod got deployed;
+>kubectl get pods -o=wide
+>kubectl get pods -o=wide —show-labels
+
+#to edit or add labels to pods;
+>kubectl label pods hello-rc-3-ckpt6 env=dev
+
+#to delete or remove a label;
+>kubectl label pods hello-rc-3-ckpt6 app-
+ 
+
+#REPLICATIONCONTROLLER:
+#Create a yml rc file
+>sudo nano rc1.yml
+>apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hello-rc-3
+spec:
+  replicas: 3
+  selector:
+    env: dev        
+  template:
+    metadata:
+      labels:
+        env: dev        
+    spec:
+      containers:
+      - name: my-rc    
+        image: nginx:latest
+        ports:
+        - containerPort: 80 
+
+#Now, run the kubectl command on this file.
+>>kubectl create -f rc1.yml
+
+# Check the rc status
+>>kubectl get rc
+
+# Lets describe the rc
+kubectl describe rc
+
+# Check the pods
+kubectl get pods
+
+# Now lets change the "desired state". Lets add more replicas. Update the rc1.yml and change from 3 to 7.
+# Then re-apply the rc1.yml.
+>kubectl apply -f rc1.yml
+#next we run
+>kubectl get pods
+We should have 7 pods.
+Now, lets simulate a node failure:
+Go to the console and stop/terminate one EC2
+
+# Get pods with their corresponding nodes
+>kubectl get pods -o wide --sort-by="{.spec.nodeName}"
+
+3- SERVICE:
+K8s service supports TCP UDP & SCTP-
+The Stream Control Transmission Protocol (SCTP) is a computer networking communications protocol in the transport layer of the Internet protocol suite.
+#Create a yml file
+>>sudo nano svc.yml
+apiVersion: v1
+kind: Service
+Metadata:
+  name: svc-gurus
+  labels:
+     env: dev
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    nodePort: 30150
+    protocol: TCP
+  selector:
+          env: dev
+
+OR…
+
+>apiVersion: v1
+Kind: Service
+metadata: 
+      name: my-nginx
+      labels:
+          run: my-nginx
+spec: 
+     ports: 
+     - port: 80
+     protocol: TCP
+     selector:
+          run: my-nginx 
+
+>kubectl describe svc my-svc
+
+#Now we can copy the public IP of the node on the console and paste it on our browser along side with the nodeport
+
+#service with a load balancer;
+>nano svc-lb.yml
+>apiVersion: v1
+kind: Service
+metadata:   
+  name: my-svc-lb
+  labels:
+    env: dev
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    env: dev
+>kubectl create -f svc-lb.yml
+
+#to delete a service;
+>kubectl delete svc “svcName”
+
+##Deployment;
+>nano deployment.yml
+>
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+#! /bin/bash
+sudo yum update -y
+sudo rpm -e --nodeps mariadb-libs-*
+sudo amazon-linux-extras enable mariadb10.5
+sudo yum clean metadata
+sudo yum install -y mariadb
+sudo mysql -V
+sudo yum install -y telnet
+sudo amazon-linux-extras enable java-openjdk11
+sudo yum clean metadata && sudo yum -y install java-11-openjdk
+mkdir /home/ec2-user/app3-usermgmt && cd /home/ec2-user/app3-usermgmt
+wget https://github.com/Bkoji1150/kojitechswebapp/releases/download/v1.2.0/kojitechs-registration-app.war -P /home/ec2-user/app3-usermgmt
+export DB_HOSTNAME=${endpoint}
+export DB_PORT=${port}
+export DB_NAME=${db_name}
+export DB_USERNAME=${db_user}
+export DB_PASSWORD=${db_password}
+java -jar /home/ec2-user/app3-usermgmt/kojitechs-registration-app.war > /home/ec2-user/app3-usermgmt/ums-start.log &
+
+
+
+
+.pre-commit-config.yaml
+
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.62.3
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate
+      - id: terraform_docs
+     # - id: terraform_sec
+        args:
+          - '--args=--lockfile=false'
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+
+
+...............................................
+
+Jenkins, Java, Docker, Maven, Ansible Bootstrap
+
+#!/bin/bash
+# Installing JAVA && Jenkins 
+sudo yum install java-1.8* -y
+sudo yum install wget -y
+sudo yum install git -y
+sudo yum install epel-release java-11-openjdk-devel
+sudo amazon-linux-extras install epel -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+sudo yum install jenkins -y
+sudo dnf upgrade
+sudo dnf install chkconfig java-devel
+sudo dnf install jenkins
+# Start jenkins service
+sudo systemctl start jenkins
+# Setup Jenkins to start at boot
+sudo systemctl enable jenkins
+sudo yum install git -y
+sudo yum install python
+sudo yum install python-pip
+pip3 install ansible
+# Installing Docker 
+yum install docker -y
+service docker start
+service docker status
+sudo useradd dockeradmin
+# sudo passwd dockeradmin TODO LIST
+sudo usermod -aG docker dockeradmin
+sudo chmod 666 /var/run/docker.sock
+# install Sonarqube scanner
+mkdir sonnar-canna
+cd sonnar-canna
+sudo unzip sonar-scanner-cli-4.6.2.2472-linux.zip
+sudo mv sonar-scanner-4.6.2.2472-linux  sonar-scanner-cli
+sudo mv sonar-scanner-cli /opt/sonar/
+# cd into /opt/sonar/conf and add format("http://%s:%s", aws_instance.SonarQubesinstance.public_ip, var.sonar_port)
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+# Installing maven
+sudo su
+mkdir /opt/maven
+cd /opt/maven
+wget https://dlcdn.apache.org/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
+#wget https://dlcdn.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
+tar -xvzf apache-maven-3.0.5-bin.tar.gz
+# echo  "JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.amzn2.M2_HOME=/opt/maven/apache-maven-3.8.4 M2=$M2_HOME/bin PATH=$PATH:$HOME/bin:$M2_HOME:$M2:$JAVA_HOME" > file10.1.x86_64  
+cat >> ~/.bash_profile 
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.302.b08-0.amzn2.0.1.x86_64
+M2_HOME=/opt/maven/apache-maven-3.0.5/bin
+M2=$M2_HOME/bin
+PATH=$PATH:$HOME/bin:$M2_HOME:$M2:$JAVA_HOME 
+sudo useradd ansible
+sudo useradd jenkins
+sudo -u jenkins mkdir /home/jenkins.ssh
+# install groovy 
+sudo mkdir /usr/share/groovy
+sudo wget wget https://archive.apache.org/dist/groovy/4.0.0-rc-1/distribution/apache-groovy-binary-4.0.0-rc-1.zip
+unzip apache-groovy-binary-4.0.0-rc-1.zip
+yum install groovy -y
+# sudo echo "ansible ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
+sudo mkdir -p /var/ansible/cw-misc-jenkins-agents-misc-ans
+sudo yum -y install git ansible python3-pip
+sudo pip3 install awscli boto3 botocore --upgrade --user
+sudo pip3 install awscli boto3 botocore --upgrade --user
+#export PATH=/usr/local/bin:$PATH
+# install taraform 
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform
+
+---------------------------------------------------------
+---------------------------------------------------------
+Setting up
+
+def call() {
+      
+    pipeline {
+            agent any
+        tools {
+            terraform 'terraform'
+        }
+        parameters { 
+            choice(name: 'ENVIRONMENT', choices: ['', 'prod', 'sbx', 'shared'], description: "SELECT THE ACCOUNT YOU'D LIKE TO DEPLOY TO.")
+            choice(name: 'ACTION', choices: ['', 'apply', 'destroy'], description: 'Select action, BECAREFUL IF YOU SELECT DESTROY TO PROD')
+        }
+        stages{    
+            stage('Git checkout') {
+                steps{
+                    checkout scm
+                        sh """
+                            pwd
+                            ls -l
+                        """
+                    }
+            }
+            stage('TerraformInit'){
+                steps {
+                        sh """
+                            rm -rf .terraform 
+                            terraform init -upgrade=true
+                            echo \$PWD
+                            whoami
+                        """
+                }
+            }
+        stage('Create Terraform workspace'){
+                steps {
+                    script {
+                        try {
+                            sh "terraform workspace select ${params.ENVIRONMENT}"
+                        } catch (Exception e) {
+                            echo "Error occurred: ${e.getMessage()}"
+                            sh """
+                                terraform workspace new ${params.ENVIRONMENT}
+                                terraform workspace select ${params.ENVIRONMENT}
+                            """
+                        }
+        
+                    }
+            }
+        }
+            stage('Terraform plan'){
+                steps {
+                        script {
+                            try{
+                                sh "terraform plan -var-file='${params.ENVIRONMENT}.tfvars' -refresh=true -lock=false -no-color -out='${params.ENVIRONMENT}.plan'"
+                            } catch (Exception e){
+                                echo "Error occurred while running"
+                                echo e.getMessage()
+                                sh "terraform plan -refresh=true -lock=false -no-color -out='${params.ENVIRONMENT}.plan'"
+                            }
+                        }
+                
+                }
+            }
+            stage('Confirm your action') {
+                steps {
+                    script {
+                        def userInput = input(id: 'confirm', message: params.ACTION + '?', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Apply terraform', name: 'confirm'] ])
+                    }
+                }
+            }
+        stage('Terraform apply or destroy ----------------') {
+                steps {
+                sh 'echo "continue"'
+                script{  
+                    if (params.ACTION == "destroy"){
+                        script {
+                            try {
+                                sh """
+                                    echo "llego" + params.ACTION
+                                    terraform destroy -var-file=${params.ENVIRONMENT}.tfvars -no-color -auto-approve
+                                """
+                            } catch (Exception e){
+                                echo "Error occurred: ${e}"
+                                sh "terraform destroy -no-color -auto-approve"
+                            }
+                        }
+                        
+                }else {
+                            sh"""
+                                echo  "llego" + params.ACTION
+                                terraform apply ${params.ENVIRONMENT}.plan
+                            """ 
+                    }  // if
+
+                }
+                }
+
+
+
+ //steps
+            }  //stage
+    }
+
+
+    post {
+        success {
+            slackSend botUser: true, channel: 'jenkins_notification', color: 'good',
+            message: "${params.ACTION} with ${currentBuild.fullDisplayName} completed successfully.\nMore info ${env.BUILD_URL}\nLogin to ${params.ENVIRONMENT} and confirm.", 
+            teamDomain: 'slack', tokenCredentialId: 'slack'
+        }
+        failure {
+            slackSend botUser: true, channel: 'jenkins_notification', color: 'danger',
+            message: "Your Terraform ${params.ACTION} with ${currentBuild.fullDisplayName} got failed.\nPlease go to ${env.BUILD_URL} and verify the build", 
+            teamDomain: 'slack', tokenCredentialId: 'slack'
+        }
+        aborted {
+            slackSend botUser: true, channel: 'jenkins_notification', color: 'hex',
+            message: "Your Terraform ${params.ACTION} with ${currentBuild.fullDisplayName} got aborted.\nMore Info ${env.BUILD_URL}", 
+            teamDomain: 'slack', tokenCredentialId: 'slack'
+        }
+        cleanup {
+            cleanWs()
+        }
+        }
+    }
+}    
+
+iandi.click
+iandson.click	....Dev
+iandia.click...Sandbox
+
+Terraform_Admin_Role
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::056433689356:root",
+                    "arn:aws:iam::260899467279:root",
+                    "arn:aws:iam::010235658422:root"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+iandiabdull@gmail.com
+iandiabdul@yahoo.com
+
+https://iandi.awsapps.com/start 
+
+
+cd .aws
+cd cred
+cat ~/.aws/credentials
+
+AKIAQ2I5VYMGNSULHIVE
+WiWdQ8MvXedDAkL9DKtSVE86m16sY/vVqp8debW1
