@@ -19,3 +19,7 @@ output "db_subnet" {
   value = aws_subnet.db_subnet.*.id
 }
 
+output "public_rt" {
+  value = aws_route_table.pub_RT.*.id
+}
+
